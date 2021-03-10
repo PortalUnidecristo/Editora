@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://s.codepen.io/boomerang/33e62cb5e925e20ec2cecf6f9d9dd8381477165960783/index.html -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./editando_capa_files/console_runner-d0a557e5cb67f9cd9bbb9673355c7e8e.js.download"></script><script src="./editandp capa_files/events_runner-21174b4c7273cfddc124acb0876792e0.js.download"></script><script src="./editandp capa_files/css_live_reload_init-7618a0de08795409d8f6c9ef6805f7b2.js.download"></script><meta name="robots" content="noindex"><link rel="canonical" href="http://codepen.io/Kakar/pen/QjdybR">
+
+<link rel="stylesheet prefetch" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.clear_both {
+  display: block;
+  clear: both;
+}
+
+
+/*START image dialog*/
+
+.ui-wrapper {
+  display: inline-block;
+}
+
+#content img {
+  display: inline-block !important;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image {
+  font-size: 12pt;
+  background: white;
+  box-shadow: 1px 1px 3px 1px gray;
+  width: 300px;
+  padding: 10px;
+  display: none;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image #info,
+.dialog-handler {
+  padding: 5px;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image #info {
+  padding: 20px 10px;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image #info label {
+  float: left;
+  width: 15%;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image #info input {
+  color: gray;
+  width: 85%;
+  float: right;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image .dialog-handler {
+  background: #e1e1e1;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image .dialog-handler p {
+  float: right;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image .dialog-handler p a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+}
+
+#wysiwyg-editor-wrapper .wysiwyg-editor-dialog-image .dialog-handler p a:hover {
+  text-decoration: underline;
+}
+/*image edit as link dialog box*/
+
+#wysiwyg-editor-wrapper #image_link_dialog {
+  background: white;
+  padding: 5px;
+  position: absolute;
+  box-shadow: 1px 1px 4px 0px gray;
+  display: none;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog div {
+  padding: 5px;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog #label {
+  float: left;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog #input {
+  float: right;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog label,
+input {
+  display: block;
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog .dialog-handler {
+  background: lightgray;
+  cursor: move;
+}
+
+#wysiwyg-editor-wrapper #image_link_dialog .dialog-handler a {
+  background: lightgray;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  margin-left: 5px;
+}</style>
+<title>Editando texto do livro</title>
+</head><body>
+<div align="center">
+  <center>
+	<table border="0" cellpadding="0" style="border-color:#808080; padding-left:4; padding-right:4; padding-top:1; padding-bottom:1" bordercolor="#111111" width="707" height="750">
+		<tr>
+			<td width="703" height=750" align="center" valign="top" style="border-style:dotted; border-width:0; padding-left:0; padding-right:0">
+			<div align="center"><center>
+				<table border="0" cellpadding="0" bordercolor="#111111" width="580" height="635">
+					<tr>
+						<td width="100%" height="635" align="center" valign="top">
+						<p align="center">
+						<div id="content" contenteditable="true" style="width: 602px; height: 5306px">
+							<meta charset="utf-8">
+							<b style="font-weight: normal" id="docs-internal-guid-9adc8f35-7fff-5716-c028-31804bf28582">
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt">Nome do Livro</span></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt">Subtítulo</span></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt">Primeira edição</span></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt">O seu nome</span></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt">Cidade</span></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt">Ano</span></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: right; margin-top: 0pt; margin-bottom: 10pt">
+							<img src="https://dummyimage.com/40x40/b0bf07/000000&text=1"></p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">
+							&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; margin-top: 0pt; margin-bottom: 10pt">
+							<span style="font-size: 26pt; font-family: Tahoma,sans-serif; font-weight: 400; font-style: normal; font-variant: normal; text-decoration: none; vertical-align: baseline; white-space: pre-wrap; background-color: transparent">
+							MMXXI Primeira edição</span></p>
+							<br>
+&nbsp;<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							&nbsp;</p>
+							</b>
+							<b id="docs-internal-guid-9adc8f35-7fff-5716-c028-31804bf28582">
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							Editora Unidecristo</p></b>
+							<b style="font-weight: normal" id="docs-internal-guid-9adc8f35-7fff-5716-c028-31804bf28582">
+							<hr width="80%"></b>
+							<b id="docs-internal-guid-9adc8f35-7fff-5716-c028-31804bf28582">
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							Copyright <font face="Times New Roman">© 2021</font></p>
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							<font face="Times New Roman">
+							www.facebook.com/seuface</font></p>
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							<font face="Times New Roman">Autor: Seu nome</font></p>
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							<font face="Times New Roman">Livro: Seu Nome</font></p>
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							Créditos: A quem fez a arte da capa, revisão, etc.</p>
+							<p dir="ltr" style="line-height: 1.2; text-align: justify; margin-left: 46.8pt; margin-right: 46.8pt; margin-top: 10pt; margin-bottom: 14pt">
+							Editor chefe: Manoel Bezerra dos Santos Neto</p></b>
+							<b style="font-weight: normal" id="docs-internal-guid-9adc8f35-7fff-5716-c028-31804bf28582">
+							<hr width="80%">
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p>&nbsp;</p>
+							<p align="right">
+							<img src="https://dummyimage.com/40x40/b0bf07/000000&text=2"><br>
+&nbsp;</b></p>
+							<h1 align="left"><span style="font-weight: 400; font-size: 26pt">&nbsp;</span></h1>
+							<h1>&nbsp;</h1>
+							<h1>Dedicatória</h1>
+							<b style="font-weight: normal" id="docs-internal-guid-9adc8f35-7fff-5716-c028-31804bf28583">
+							<p dir="ltr" style="line-height: 1.3800000000000001; text-indent: 14.2pt; text-align: justify; margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+							</b>
+							<p align="center">&nbsp;</p>
+							<p align="left">&nbsp;&nbsp;&nbsp;&nbsp; Pessoas 
+							queridas, parentes amigos, professores, etc.</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp; </p>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							<span style="font-weight: 400; font-size: 26pt">&nbsp;</span></h1>
+							<h1 align="right">
+							<img src="https://dummyimage.com/40x40/b0bf07/000000&text=3" width="40" height="40"></h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">
+							&nbsp;</h1>
+							<h1 align="left">&nbsp;</h1>
+							<h1><span style="font-size: 26pt">Biografia </span>&nbsp;</h1>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;&nbsp;&nbsp; Diga alguma coisa 
+							relacionado a sua vida, nome, idade, naturalidade, 
+							onde mora, sonhos que não foram realizados e o que 
+							já foram, texto não muito curto mais também não 
+							muito longo de 15 a 20 linhas</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="right">
+							<img src="https://dummyimage.com/40x40/b0bf07/000000&text=4" width="40" height="40"></p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">
+							<span style="font-weight: 400; font-size: 26pt">&nbsp;&nbsp; </span>
+							</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p><span style="font-size: 26pt">Introdução</span></p>
+							<p><span style="font-size: 26pt">&nbsp;</span> </p>
+							<p align="left">&nbsp;&nbsp;&nbsp; Adiante um 
+							tira-gosto do que o leitor vai ler, argumente uma 
+							situação de bem estar onde ele vai ficar satisfeito 
+							em ler o seu livro, aqui é um resumo mais caprichado 
+							explicando o valor do conhecimento que o seu livro 
+							irá proporcionar, desperte a curiosidade do leitor, 
+							diga que vai falar algo espetacular sem dizer o que, 
+							não deixe o leitor desistir da leitura, digo o que 
+							vem a seguir sem contar os detalhes porque ele 
+							sabendo do desfecho da leitura não vai querer ler. 
+							Você poderá deixar esta parte para depois ou vai 
+							fazendo e mudando com o passar do tempo.</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</p>
+							<p align="left">&nbsp;&nbsp;&nbsp; </p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="right">
+							<img src="https://dummyimage.com/40x40/b0bf07/000000&text=5" width="40" height="40"></p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<table border="1" width="60%" height="200" bordercolor="#808080" bgcolor="#C0C0C0">
+								<tr>
+									<td>
+									<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">
+									<font size="7">Parte um </font>
+									<p align="center"><font size="7">o 
+									começo</font><p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;</td>
+								</tr>
+							</table>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="right">
+							<img src="https://dummyimage.com/40x40/b0bf07/000000&text=6" width="40" height="40"></p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; 
+							Comece aqui o seu texto:</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp;</p>
+							<p align="left">&nbsp; </p>
+							<p align="center">&nbsp;</p>
+							<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;<p align="right">&nbsp;<p align="center">&nbsp;<p align="center">&nbsp;</div>
+						</td>
+					</tr>
+				</table></center></div>
+			<p align="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
+			<p>&nbsp;</p>
