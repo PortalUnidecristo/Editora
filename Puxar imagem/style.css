@@ -1,0 +1,11 @@
+body {
+  padding: 20px;
+}
+
+.avatar-wrap {
+  width: 250px;
+  height: 300px;
+  border: 0px solid black;
+  margin: 20px;
+  float: left;
+}
