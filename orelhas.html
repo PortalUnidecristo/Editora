@@ -104,6 +104,12 @@ input {
   color: black;
   margin-left: 5px;
 }</style>
+<style>
+@media print { 
+#noprint { display:none; } 
+body { background: #fff; }
+}
+</style>
 <title>Editando orelhas do livro</title>
 </head><body bgcolor="#666699">
 <div align="center">
@@ -158,6 +164,11 @@ input {
     </script>	
 			
 	</table>
+	<p align="right"><div id="noprint">
+<a href="listagem_cliente.php"><button type="button" class="btn btn-primary">Voltar</button></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href="javascript:;" onclick="window.print();return false"><button type="button" class="btn btn-danger" title="Imprimir">Imprimir</button></a>
+</div>  </p>
 	<p align="right">&nbsp;</p>
 	<p align="right">&nbsp;</p>
 	<div>
