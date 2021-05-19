@@ -102,7 +102,7 @@ $("#file").on("change", function(event) {
     fileTracker.onload = function() {
       Resample(
        this.result,
-       166,
+       200,
        300,
        doneResizeOne
      );
