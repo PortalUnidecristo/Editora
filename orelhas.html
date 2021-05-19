@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- saved from url=(0086)http://s.codepen.io/boomerang/33e62cb5e925e20ec2cecf6f9d9dd8381477165960783/index.html -->
 <html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./editando_capa_files/console_runner-d0a557e5cb67f9cd9bbb9673355c7e8e.js.download"></script><script src="./editandp capa_files/events_runner-21174b4c7273cfddc124acb0876792e0.js.download"></script><script src="./editandp capa_files/css_live_reload_init-7618a0de08795409d8f6c9ef6805f7b2.js.download"></script><meta name="robots" content="noindex"><link rel="canonical" href="http://codepen.io/Kakar/pen/QjdybR">
  <link href='https://raw.githubusercontent.com/PortalUnidecristo/Editora/gh-pages/image.ico' rel='icon' type='image/png'>
 <link href='https://raw.githubusercontent.com/PortalUnidecristo/Editora/gh-pages/image.ico' rel='shortcut icon' type='image/png'>
@@ -150,14 +151,20 @@ input {
 
 <p align="right">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<table border="0">
-	<tr>
-		<td><div>
+<script type="text/javascript">
+        function Mudarestado(el) {
+        var display = document.getElementById(el).style.display;
+        if(display == "none")
+            document.getElementById(el).style.display = 'block';
+        else
+            document.getElementById(el).style.display = 'none';
+    }
+    </script>	
+			
+	</table>
+	<div>
 <button type="button" onclick="Mudarestado('minhaDiv')">Mostrar / 
 		Esconder</button><div id="minhaDiv">
-</td>
-	</tr>
-</table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%">
@@ -183,17 +190,6 @@ onde queira colocar.</font></p>
 <p><font size="4" color="#663300" face="Arial">Você tambem pode copiar uma 
 imagem entre 300X300 px e colar no lugar da imagem de demostração.</font></p>
 <p>&nbsp;</p>
-<script type="text/javascript">
-        function Mudarestado(el) {
-        var display = document.getElementById(el).style.display;
-        if(display == "none")
-            document.getElementById(el).style.display = 'block';
-        else
-            document.getElementById(el).style.display = 'none';
-    }
-    </script>	
-			
-	</table>
 	<p>&nbsp;</p>
 <center><table border="1" width="323">
 			<tr>
