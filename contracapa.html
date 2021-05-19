@@ -125,8 +125,19 @@ input {
   color: black;
   margin-left: 5px;
 }</style>
+<style>
+@media print { 
+#noprint { display:none; } 
+
+</style>
+
 <title>Editando contra capa de livro</title>
 </head><body bgcolor="#666699">
+
+<div id="noprint">
+<a href="javascript:;" onclick="window.print();return false"><button type="button" class="btn btn-danger" title="SALVAR">SALVAR</button></a>
+</div>
+
 <div align="center">
   <center>
   <table border="1" cellpadding="0" cellspacing="0" style="border-color:#808080; border-collapse: collapse; padding-left:4; padding-right:4; padding-top:1; padding-bottom:1" bordercolor="#111111" width="707" height="750">
@@ -157,25 +168,26 @@ input {
     
 		<p align="center">
        &nbsp;</p>
-		<p align="center"><b><font face="Book Antiqua" size="4">Escreva um resumo bem 
-		atrativo sobre o livro, mostre ao leitor a grande importância dele, crie 
-		expectativa, demonstre uma grande vantagem de o leitor decidir escolher 
-		ler o seu livro entre tantos outros concorrentes. <br>
+		<p align="center"><b><font face="Book Antiqua" size="4">Escreva um 
+		resumo bem atrativo sobre o livro, mostre ao leitor a grande importância 
+		dele, crie expectativa, demonstre uma grande vantagem de o leitor 
+		decidir escolher ler o seu livro entre tantos outros concorrentes. <br>
 		Um ditado diz para não julgar o livro pela capa, mas querendo ou não a 
 		atenção do leitor se lança diretamente a capa, ele pegando no livro vai 
 		antes de folhear olhar a contracapa, onde se depara com uma importante 
 		informação; Um resumo do que ele vai ler, neste momento a isca no anzol 
-		tem que ser bem apetitosa, pois por mais que o assunto seja 
-		importante aqui não pode haver erro algum. Inclusive letras miúdas ou 
-		erro ortográfico ou gramatical, capriche na concordância, tente fisgar 
-		o leitor aqui, porque em muitas das vezes não será possível folhear o 
+		tem que ser bem apetitosa, pois por mais que o assunto seja importante 
+		aqui não pode haver erro algum. Inclusive letras miúdas ou erro 
+		ortográfico ou gramatical, capriche na concordância, tente fisgar o 
+		leitor aqui, porque em muitas das vezes não será possível folhear o 
 		livro.</font></b></p>
-		<p align="center"><b><font size="4" face="Book Antiqua">&nbsp;Não pode ser um texto 
-		longo porque terminará tirando a vontade do leitor ler, logo que perceba 
-		o tamanho do texto, por sentir uma perda de tempo caso não seja 
+		<p align="center"><b><font size="4" face="Book Antiqua">&nbsp;Não pode ser um 
+		texto longo porque terminará tirando a vontade do leitor ler, logo que 
+		perceba o tamanho do texto, por sentir uma perda de tempo caso não seja 
 		interessante. Não pense em você sendo o leitor do seu livro, pense na 
-		maioria dos leitores, outras pessoas podem não ter o mesmo gosto literário igual ao seu, mas 
-		devemos agradar a maioria caso o assunto seja de interesse popular.</font></b><font size="4" face="Book Antiqua"><br>
+		maioria dos leitores, outras pessoas podem não ter o mesmo gosto 
+		literário igual ao seu, mas devemos agradar a maioria caso o assunto 
+		seja de interesse popular.</font></b><font size="4" face="Book Antiqua"><br>
 &nbsp;</font></p>
 		<p align="center"><b><font size="6" color="#AF7B2F">Subtítulo</font></b><p align="center">
 		&nbsp;<p align="center">
@@ -214,8 +226,7 @@ input {
 &nbsp;<p>
 &nbsp;<p>
 &nbsp;<p>
-<button type="button" onclick="Mudarestado('minhaDiv')">Mostrar / 
-		Esconder</button><div id="minhaDiv">
+<button type="button" onclick="Mudarestado('minhaDiv')">Mostrar / Esconder</button><div id="minhaDiv">
 	
 <table border="1" width="91%">
 	<tr>
