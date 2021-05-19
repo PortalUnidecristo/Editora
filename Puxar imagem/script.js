@@ -114,5 +114,5 @@ $("#file").on("change", function(event) {
 });
 
 function doneResizeOne(data) {
-  $("#avatar-1").attr("src", data); 
+  $("#avatar-2").attr("src", data); 
 }
